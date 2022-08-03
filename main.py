@@ -16,6 +16,9 @@ files = os.listdir(dir_path)
 print(f"files in path are: {files}")
 
 for file in files:
+    if file == '.gitignore':
+        continue
+        
     file_split = file.split("_")
     box = file_split[0][-1:]
     cant = file_split[1][-1:]
