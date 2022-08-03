@@ -6,8 +6,11 @@ You will need a copy of python 3. Ideally 3.7.10 onwards as specified in the pyt
 
 Use a 64 bit version if possible. It'll be faster.
 
+Make sure on installation of python to check `Add Python to PATH`. This will allow you to use commands in the commandline.
+
 ## Setup
 
+Navigate to this project folder in cmd or bash
 Create a venv environment with `python3 -m venv ./venv`  
 Activate the virtual environment with `source venv/bin/activate`  
 From there you have an independent project space to start install modules  
