@@ -44,8 +44,8 @@ for file in files:
 
     # Rescale
     for i in range(len(x)):
-        x[i] = x[i] * 10**6
-        y[i] = y[i] * 10**9
+        x[i] = x[i] * 10 ** 6
+        y[i] = y[i] * 10 ** 9
 
     # Translation
     x_trans = x[0]
@@ -93,11 +93,11 @@ plot_key_list = [
 for meta_data in plot_key_list:
     for key, value in meta_data.items():
         plt.figure(key)
-        plt.title(f"{value['group']} ({value['count']} plots)", fontsize=14)
+        plt.title("%s %s plots" % (value['group'], value['count']), fontsize=14)
         plt.xlabel("Height (um)", fontsize=14)
         plt.ylabel("Force per Radius (nN)", fontsize=14)
         plt.ylim([-6, 2])
         if value["group"] is "1s, 30s, 60s":
-            plt.savefig(f"output/total_output")
+            plt.savefig("output/total_output")
         else:
-            plt.savefig(f"output/{value['group']}_output")
+            plt.savefig("output/%s_output" % (value['group']))
